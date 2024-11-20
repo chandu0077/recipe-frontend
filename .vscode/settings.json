@@ -1,0 +1,10 @@
+{
+  "eslint.rules.customizations": [
+    {
+      "rule": "*",
+      "severity": "warn"
+    }
+  ],
+  "eslint.nodeEnv": "",
+  "eslint.codeActionsOnSave.rules": null
+}
