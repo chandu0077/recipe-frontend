@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import {
   Button,
   Icon,
@@ -23,9 +22,8 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import CreateRecipe from "@/components/CreateRecipe";
 import axios from "axios";
-export default function HomePage() {
-  const router = useRouter();
 
+export default function HomePage() {
   const [recipesData, setRecipesData] = useState<any>();
   const [editing, setEditing] = useState<boolean>(false);
   const [recipeData, setRecipeData] = useState<any>();
@@ -43,6 +41,7 @@ export default function HomePage() {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getRecipes();
   }, []);

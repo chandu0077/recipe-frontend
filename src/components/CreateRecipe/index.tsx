@@ -1,3 +1,5 @@
+"use client";
+import dynamic from "next/dynamic";
 import {
   FormErrorMessage,
   Box,
@@ -22,7 +24,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { recipeForm } from "@/utils/forms/recipeForm";
-import JoditEditor from "jodit-react";
+// import JoditEditor from "jodit-react";
+
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 interface Props {
   getRecipes: Function;

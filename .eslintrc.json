@@ -1,4 +1,5 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
-  "prettier/prettier": "warn"
+  "prettier/prettier": "warn",
+  "root": true
 }
